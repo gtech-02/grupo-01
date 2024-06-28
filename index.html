@@ -3,27 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Story</title>
+    <title>Digital Store</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
 </head>
+
+<style>
+  .navbar {
+    padding: 0;
+  }
+  .btn-outline-primary:hover {
+    border-color: #C92071 !important;
+    color: white !important;
+    background-color: #C92071;
+  } 
+
+.btn-outline-segundarie:hover{
+  border-color: #C92071;
+  color: azure !important; 
+  background-color: #C92071;
+}
+
+.btn-outline-danger:hover{
+  border-color: #C92071;
+  color: azure !important;
+  background-color: #C92071;
+}
+
+</style>
 <body>
     <main class="menu">
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <img src="C:\Users\victor0759\grupo-01\imagens-menu\logo-header.svg" alt="Logo" width="150" height="50" class="d-inline-block align-text-top">
+                <img src="imagens-menu\logo-header.svg" alt="Logo" width="200" height="50" class="d-inline-block align-text-top">
               </a>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Pesquisa" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+              <form class="d-flex mx-auto" role="search">
+                <input class="form-control me-2" style="width: 500px;" type="search" placeholder="Pesquisa" aria-label="Search">
+                <button class="btn btn-outline-segundarie" type="submit" style="color: #C92071;border-color: #C92071;">Pesquisar</button>
               </form>
               <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Cadastre-se
-  </button>
+              <button type="button" class="btn btn-outline-primary me-2 secondarie" style="color: #C92071; border-color: #C92071;">Cadastre-se</button>
   
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -34,36 +56,55 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form>
-                <fieldset disabled>
-                  <legend>Disabled fieldset example</legend>
-                  <div class="mb-3">
-                    <label for="disabledTextInput" class="form-label">Disabled input</label>
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-                  </div>
-                  <div class="mb-3">
-                    <label for="disabledSelect" class="form-label">Disabled select menu</label>
-                    <select id="disabledSelect" class="form-select">
-                      <option>Disabled select</option>
-                    </select>
-                  </div>
-                  <div class="mb-3">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-                      <label class="form-check-label" for="disabledFieldsetCheck">
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
+            <form class="row g-3">
+                <div class="col-auto">
+                  <label for="inputEmail2" class="visually-hidden">Email</label>
+                  <input type="email" readonly class="form-control" id="inputEmail2" placeholder="Email">
+                </div>
+                <div class="col-auto">
+                  <label for="inputPassword2" class="visually-hidden">Password</label>
+                  <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                </div>
               </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Cadastra</button>
         </div>
       </div>
     </div>
-  </div>  
+  </div>
+  <!-- fim da model -->
+  <button type="button" class="btn btn-outline-danger me-5" style="color: #C92071;border-color: #C92071;">Entrar</button>
+  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.42233 17.8203C5.84433 17.8203 6.18733 18.1633 6.18733 18.5853C6.18733 19.0073 5.84433 19.3493 5.42233 19.3493C5.00033 19.3493 4.65833 19.0073 4.65833 18.5853C4.65833 18.1633 5.00033 17.8203 5.42233 17.8203Z" stroke="#C92071" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6747 17.8203C17.0967 17.8203 17.4397 18.1633 17.4397 18.5853C17.4397 19.0073 17.0967 19.3493 16.6747 19.3493C16.2527 19.3493 15.9097 19.0073 15.9097 18.5853C15.9097 18.1633 16.2527 17.8203 16.6747 17.8203Z" stroke="#C92071" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0.749878 1.25L2.82988 1.61L3.79288 13.083C3.87088 14.018 4.65188 14.736 5.58988 14.736H16.5019C17.3979 14.736 18.1579 14.078 18.2869 13.19L19.2359 6.632C19.3529 5.823 18.7259 5.099 17.9089 5.099H3.16388" stroke="#C92071" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12.1254 8.79504H14.8984" stroke="#C92071" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>          
+</nav>
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Calçados</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blusas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Berbudas</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </nav>
     </main>
 </body>
