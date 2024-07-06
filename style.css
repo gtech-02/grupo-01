@@ -198,3 +198,25 @@ section{
 
 }
 /* fim da galeria */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card div{
+    text-align: center;
+   
+}
+
+.card {
+    max-width: 220px; 
+    margin: 20px; 
+    padding: 10px;
+    margin-left: 60px;
+}
+
+.card h6 {
+    font-size: .9rem;
+    color: #5c5c5ceb;
+}
