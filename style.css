@@ -2,6 +2,7 @@
 .img-g{
     width: 400px;
     height: 400px;
+    box-shadow: 3px 3px 10px black;
 }
 section{
     justify-content: center;
@@ -33,6 +34,7 @@ section{
     border: solid 2px black;
     background-color: #C92071;
     color: white;
+    box-shadow: 3px 3px 10px black;
 }
 .s-m:active{
     scale: 120%;
@@ -216,6 +218,7 @@ section{
     margin: 20px; 
     padding: 10px;
     margin-left: 60px;
+    box-shadow: 3px 3px 10px black;
 }
 
 .card h6 {
@@ -277,7 +280,13 @@ ul{
     font-size: 20px;
     padding: 15px 22px;
     cursor: pointer;
+    transition: 0.8s;
 
+}
+.button:hover{
+    background-color: #ffffff;
+    color: #e91e63;
+    scale: 110%;
 }
 
 .footer-col h4{
@@ -322,3 +331,4 @@ ul{
 	border-radius: 50%;
 	color: #ffffff;
 }
+
