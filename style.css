@@ -314,11 +314,6 @@ ul{
     transition: 0.8s;
 
 }
-.button:hover{
-    background-color: #ffffff;
-    color: #e91e63;
-    scale: 110%;
-}
 
 .footer-col h4{
     font-size: 20px;
