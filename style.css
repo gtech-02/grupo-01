@@ -1,8 +1,37 @@
+/*inicio do css header*/
+
+.navbar {
+    padding: 0
+  }
+
+  .btn-outline-primary:hover {
+    border-color: #C92071 !important;
+    color: white !important;
+    background-color: #C92071;
+  }
+
+  .btn-outline-segundarie:hover {
+    border-color: #C92071;
+    color: rgb(255, 255, 255) !important;
+    background-color: #C92071;
+  
+  }
+
+  button:active {
+    background-color: #991956 !important;
+    color: #ffffff;
+
+  }
+
+/*fim do css header*/
+
+
 /* começo do css da galeria */
 .img-g{
     width: 400px;
-    height: 400px;
+    height: 350px;
     box-shadow: 3px 3px 10px black;
+    margin-top: 10px ;
 }
 section{
     justify-content: center;
@@ -22,6 +51,7 @@ section{
     margin: 0;
     z-index: 1;
     font-weight: bold;
+    margin-top: 50px ;
 }
 .div-sm{
     justify-content: center;
@@ -35,11 +65,12 @@ section{
     background-color: #C92071;
     color: white;
     box-shadow: 3px 3px 10px black;
+    margin-bottom: 50px;
+    margin-top: 10px;
 }
 .s-m:active{
     scale: 120%;
-    background-color: white;
-    color: #C92071;
+    color: #ffffff;
     transition: ease-in-out 0.05s;
 }
 /* animações da galeria */
