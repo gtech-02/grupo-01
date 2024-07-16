@@ -27,31 +27,46 @@
 
 
 /* começo do css da galeria */
+
+.carousel{
+    max-width: 1000px;
+    max-height: 800px;
+    margin: auto;
+}
+
+
+
 .img-g{
-    width: 400px;
-    height: 350px;
+    width: auto;
+    height: 315px;
     box-shadow: 3px 3px 10px black;
-    margin-top: 10px ;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
 }
 section{
-    justify-content: center;
+    /* justify-content: center; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 10px;
+    margin-bottom: 50px;
+}
+.element{
+    width: fit-content;
 }
 .titul-div{
     justify-content: center;
     display: flex;
 }
 .g-titulo{
-    font-size: 28px;
+    font-size: 20px;
     padding: 0;
     color: #C92071;
     padding: 0;
     margin: 0;
     z-index: 1;
     font-weight: bold;
-    margin-top: 50px ;
+    margin-top: 50px;
 }
 .div-sm{
     justify-content: center;
@@ -65,7 +80,7 @@ section{
     background-color: #C92071;
     color: white;
     box-shadow: 3px 3px 10px black;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     margin-top: 10px;
 }
 .s-m:active{
@@ -245,10 +260,11 @@ section{
 }
 
 .card {
-    max-width: 220px; 
+    max-width: 200px; 
+    max-height: 400px;
     margin: 20px; 
-    padding: 10px;
-    margin-left: 60px;
+    padding: 5px;
+    margin-left: 5px;
     box-shadow: 3px 3px 10px black;
 }
 
@@ -296,7 +312,7 @@ ul{
 	font-size: 20px;
 	color: #ffffff;
 	text-transform: capitalize;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	font-weight: 500;
 	position: relative;
 }
@@ -305,14 +321,15 @@ ul{
     color: #ffffff;
     background-color: #e91e63;
     border-radius: 12px;
-    margin-top: 50px;
+    margin-top: 10px;
     border: none;
     text-align: center;
-    font-size: 20px;
-    padding: 15px 22px;
+    font-size: 12px;
+    padding: 10px 11px;
     cursor: pointer;
     transition: 0.8s;
-
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
 .footer-col h4{
