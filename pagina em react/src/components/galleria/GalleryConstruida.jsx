@@ -1,3 +1,4 @@
+import React from "react";
 import gallery from "./gallery";
 import './gallery.css'
 
@@ -17,6 +18,7 @@ let complementos = [
         id:"b3"
     }
 ];
+
 for(i = 0; i < gallery; i++){
-    gallery(complementos) += gallery(complementos[i])
+    gallery(complementos) += i
 }
