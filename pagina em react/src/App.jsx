@@ -1,11 +1,14 @@
 import React from 'react'
-import './App.css'
-import Galleria from "./components/galleria/GalleryConstruida"
+import Header from './components/cabeçario/Header'
+import Footer from './components/footer/Footer'
 
 function App() {
 
   return (
-
+    <>
+    <Header/>
+    <Footer/>
+    </>
   )
 }
 
