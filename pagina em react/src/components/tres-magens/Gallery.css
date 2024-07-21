@@ -6,15 +6,14 @@
     border-radius: 10px;
     margin-left: 10px;
 }
-section{
-    /* justify-content: center; */
+
+.element{
+    justify-content: center;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     gap: 10px;
     margin-bottom: 50px;
-}
-.element{
-    width: fit-content;
+    
 }
 .titul-div{
     justify-content: center;
