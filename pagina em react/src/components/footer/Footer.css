@@ -29,6 +29,7 @@ ul{
 .footer-col{
    width: 25%;
    padding: 0 15px;
+
 }
 .footer-col h3{
 	font-size: 20px;
@@ -37,6 +38,7 @@ ul{
 	margin-bottom: 30px;
 	font-weight: 500;
 	position: relative;
+	padding-top: 20px;
 }
 
 .button {
@@ -100,3 +102,14 @@ ul{
 		 padding-left: 50px;
 	}
 	
+	.logo-f{
+		padding-right: 50px;
+	}
+	ol, ul {
+		 padding-left: 0; 
+	}
+
+.map{
+	border-radius: 8px;
+
+}
