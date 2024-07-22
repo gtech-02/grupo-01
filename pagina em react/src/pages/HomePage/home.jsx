@@ -3,8 +3,8 @@ import Header from '../../components/cabeçario/Header'
 import Footer from '../../components/footer/Footer'
 import Slide from '../../components/Slide/Slide'
 import Gallery from '../../components/tres-magens/Gallery'
-
-function App() {
+import { Layout } from '../../Layout' 
+function Home() {
 
   return (
     <>
@@ -16,4 +16,4 @@ function App() {
   )
 }
 
-export default App
+export default Home
