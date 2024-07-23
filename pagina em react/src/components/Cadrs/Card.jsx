@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
+import "./Cardc.css"
 
 export default function Card({ produto }) {
   return (
@@ -8,7 +9,7 @@ export default function Card({ produto }) {
         <h5 className="card-title">{produto.nome}</h5>
         <h6>{produto.qualidades}</h6>
         <span>{produto.preco}</span>
-        <div className="d-grid gap-2 col-6 mx-auto">
+        <div className="bt">
 <button id="botao"className="btn btn-primary" type="button">
             Comprar
           </button>
