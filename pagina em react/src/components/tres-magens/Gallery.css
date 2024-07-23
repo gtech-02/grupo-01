@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     
 }
 .titul-div{
@@ -45,8 +45,8 @@
     margin-top: 10px;
 }
 .s-m:active{
-    scale: 120%;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #C92071;
     transition: ease-in-out 0.05s;
 }
 /* animações da galeria */
@@ -136,7 +136,7 @@
     /* fim da animaçoes da galeria */
 }
 @media (max-width:540px) {
-    section{
+    .element{
         display: grid;
         grid-template-columns: 300px;
 
