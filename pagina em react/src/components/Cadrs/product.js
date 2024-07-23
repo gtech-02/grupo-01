@@ -1,7 +1,5 @@
 
-export default function Product() {
-
-  let Produto = [
+export default [
     {
       nome: "Tênis Mizuno Space 4 Feminino",
       image: "https://imgcentauro-a.akamaihd.net/768x768/98650812.jpg",
@@ -95,5 +93,3 @@ export default function Product() {
     },
   ];
 
-  return Produto
-}

@@ -56,13 +56,6 @@ ul{
     margin-bottom: 10px;
 }
 
-.footer-col h4{
-    font-size: 20px;
-	color: #ffffff;
-	margin-bottom: 20px;
-    bottom: -10px;
-}
-
 .footer-col h3::before{
 	content: '';
 	position: absolute;
@@ -81,7 +74,6 @@ ul{
 	text-decoration: none;
 	font-weight: 300;
 	color: #bbbbbb;
-	display: block;
 	transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{

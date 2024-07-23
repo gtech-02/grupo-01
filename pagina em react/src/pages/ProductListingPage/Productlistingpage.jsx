@@ -1,12 +1,12 @@
-// import { Layout } from "../../Layout";
-// import Listagem from "../../components/Cadrs/Card-list";
+import { Layout } from "../../Layout";
+import Listagem from "../../components/Cadrs/Cardlist";
 
-// export default function Produtoslistingpage(){
-//     return(
-//     <>
-//     <Layout>
-//         <Listagem/>
-//     </Layout>
-//     </>
-//     )
-// }
+export default function Produtoslistingpage(){
+    return(
+    <>
+    <Layout>
+        <Listagem/>
+    </Layout>
+    </>
+    )
+}
