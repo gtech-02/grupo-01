@@ -66,7 +66,7 @@ export default [
     id: 8,
   },
   {
-    nome: "Tênis Converse All Star CT AS Core OX CT0001 - Unissex",
+    nome: "Tênis Converse All Star CT AS Core OX CT0001",
     image: "https://imgcentauro-a.akamaihd.net/768x768/88286801.jpg",
     qualidades: "Bege",
     preco: "R$ 499,99",
@@ -120,6 +120,14 @@ export default [
     preco: "R$ 360,99",
     descricao: "Combinamos a entressola macia com uma plataforma estável que permite movimentos laterais e corridas curtas. Mais Benefícios Colarinho confortável oferece sensação macia e suporte, ajudando você a calçar e tirar o tênis com facilidade quando estiver em movimento. Antepé respirável com mesh de performance ajuda a manter você fresco.",
     id: 15,
+  },
+  {
+    nome: "Tênis Nike In-Season TR 13 Feminino",
+    image: "https://static.netshoes.com.br/produtos/tenis-nike-in-season-tr-13-feminino/14/JD8-5710-014/JD8-5710-014_zoom1.jpg?ts=1698436182?ims=400x",
+    qualidades: "Branco",
+    preco: "R$ 360,99",
+    descricao: "Combinamos a entressola macia com uma plataforma estável que permite movimentos laterais e corridas curtas. Mais Benefícios Colarinho confortável oferece sensação macia e suporte, ajudando você a calçar e tirar o tênis com facilidade quando estiver em movimento. Antepé respirável com mesh de performance ajuda a manter você fresco.",
+    id: 16,
   },
 ];
 
