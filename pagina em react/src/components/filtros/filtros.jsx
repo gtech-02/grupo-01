@@ -5,7 +5,7 @@ function Filtros() {
         <>
             <section className='filtros'>
                 <form>
-                    <div className="form-row align-items-center">
+                    <div id='ordem' className="form-row align-items-center">
                         <div className="col-auto my-1">
                             <label className="mr-sm-2 sr-only" for="inlineFormCustomSelect"><h2>Ordenar por:</h2></label>
                             <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">

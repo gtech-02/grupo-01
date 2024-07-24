@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './Cardc.css'
+import './Cardcs.css'
 
 export default function CardHome({ produto }) {
   return (
