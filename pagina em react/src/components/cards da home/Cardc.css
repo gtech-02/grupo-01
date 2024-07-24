@@ -8,6 +8,7 @@
     height: 500px;
     padding: 0;
     margin-bottom: 5px;
+    box-shadow: 4px 4px 10px black;
     
 }
 #botao{
