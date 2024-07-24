@@ -57,7 +57,7 @@ function Filtros() {
                             <label><input type="checkbox" name="brand" value="Tamanhos" /> 34 a 36</label>
                             <label><input type="checkbox" name="brand" value="Tamanhos" /> 37 a 40</label>
                             <label><input type="checkbox" name="brand" value="Tamanhos" /> 41 a 44</label>
-                            <button id="apply-filters"><h4>Filtros</h4></button>
+                            <button className='b-f' id="apply-filters"><h4>Filtros</h4></button>
                         </div>
                     </div>
                 </div>
