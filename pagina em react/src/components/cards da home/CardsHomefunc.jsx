@@ -1,12 +1,12 @@
 import product from "../Cadrs/product";
-import CardHome from "./CardsHome";
+import Card from "../Cadrs/Card";
 
 
 export default function ListagemHome() {
   let cards = [];
   for (let i = 0; i < 8; i++) {
     cards.push(
-        <CardHome produto={product[i]} />
+        <Card produto={product[i]} />
     );
   }
 

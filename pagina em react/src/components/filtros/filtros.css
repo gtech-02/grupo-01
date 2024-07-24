@@ -72,3 +72,9 @@
     background-color: white;
     transition: ease-in-out 0.05s;
 }
+select{
+  color: #C92071;
+}
+option{
+  color: #C92071;
+}
