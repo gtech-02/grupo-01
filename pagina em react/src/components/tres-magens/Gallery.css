@@ -1,0 +1,209 @@
+.img-g{
+    width: auto;
+    height: 315px;
+    box-shadow: 3px 3px 10px black;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.element{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    
+}
+.titul-div{
+    justify-content: center;
+    display: flex;
+}
+.g-titulo{
+    font-size: 20px;
+    padding: 0;
+    color: #C92071;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.div-sm{
+    justify-content: center;
+    display: flex;
+}
+.s-m{
+    padding: 10px;
+    width: 200px;
+    border-radius: 30px;
+    border: solid 2px black;
+    background-color: #C92071;
+    color: white;
+    box-shadow: 3px 3px 10px black;
+    margin-bottom: 150px;
+    margin-top: 10px;
+}
+.s-m:active{
+    background-color: #ffffff;
+    color: #C92071;
+    transition: ease-in-out 0.05s;
+}
+/* animações da galeria */
+#b1{
+    animation: clickeme1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#b2{
+    animation: clickeme2;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#b3{
+    animation: clickeme3;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes clickeme1{
+    0%{
+        scale: 100%;
+    }
+    10%{
+        scale: 130%;
+    }
+    20%{
+        scale: 100%;
+    }
+    70%{
+        scale: 100%;
+    }
+    80%{
+        scale: 130%;
+    }
+    100%{
+        scale: 100%;
+    }
+}
+@keyframes clickeme2{
+    0%{
+        scale: 100%;
+    }
+    20%{
+        scale: 100%;
+    }
+    30%{
+        scale: 130%;
+    }
+    40%{
+        scale: 100%;
+    }
+    70%{
+        scale: 100%;
+    }
+    80%{
+        scale: 130%;
+    }
+    100%{
+        scale: 100%;
+    }
+}
+@keyframes clickeme3{
+    0%{
+        scale: 100%;
+    }
+    40%{
+        scale: 100%;
+    }
+    50%{
+        scale: 130%;
+    }
+    60%{
+        scale: 100px;
+    }
+    70%{
+        scale: 100%;
+    }
+    80%{
+        scale: 130%;
+    }
+    100%{
+        scale: 100%;
+    }
+    /* fim da animaçoes da galeria */
+}
+@media (max-width:540px) {
+    .element{
+        display: grid;
+        grid-template-columns: 300px;
+
+    }
+    .img-g{
+        height: 250px;
+        width: 300px;
+    }
+    .s-m{
+        scale: 90%;
+    }
+    #b1{
+        animation:arespon;
+        animation-timing-function: ease-in-out;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+    }
+    #b2{
+        animation:arespon;
+        animation-timing-function: ease-in-out;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+    }
+    #b3{
+        animation:arespon;
+        animation-timing-function: ease-in-out;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes arespon {
+        0%{
+            scale: 100%;
+            background-color: #C92071;
+            color: white
+        }
+        15%{
+            scale: 120%;
+            background-color: white;
+            color: #C92071
+        }
+        25%{
+            scale: 100%;
+            background-color: white;
+            color: #C92071
+        }
+        40%{
+            scale: 120%;
+            background-color: #C92071;
+            color: white;
+        }
+        55%{
+            scale: 100%;
+            background-color: #C92071;
+            color: white;
+        }
+        60%{
+            transform: rotateX(0);
+        }
+        80%{
+           transform: rotatez(-360deg);
+           scale: 100%;
+        }
+        100%{
+            scale: 100%;
+            transform: rotateX(0);
+        }  
+    }
+
+}

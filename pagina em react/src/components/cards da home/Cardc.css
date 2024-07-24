@@ -1,0 +1,41 @@
+/* img{
+    width: 200px;
+    height: 300px;
+} */
+
+.card{
+    width: 280px;
+    height: 500px;
+    padding: 0;
+    margin-bottom: 5px;
+    
+}
+#botao{
+   width: 150px;
+   background-color: #C92071;
+   border-color: #C92071;
+   border-radius: 5px;
+   transition: ease-in-out 0.3s;
+   margin-top: 10px;
+   margin-right: 50px;
+}
+#botao:active{
+    color: #C92071;
+    background-color: white;
+    transition: ease-in-out 0.05s;
+}
+#botao:hover{
+    scale: 105%;
+    
+}
+.col-cards{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    
+}
+.section-Homel{
+    display: flex;
+    height: 1100px;
+    padding-top: 0;
+    justify-content: center;;
+}

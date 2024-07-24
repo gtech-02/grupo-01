@@ -1,0 +1,111 @@
+
+.topo{
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.logo-icon{
+  margin-left: 0px;
+  margin-right: 10px;
+}
+.Icon{
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
+.pesquisa{
+  margin-left: 0px;
+  justify-content: center;
+  width: 350px;
+  height: 34px;
+  margin-left: auto;
+  border-radius: 5px;
+  border: none;
+  background-color: #CCCCCC;
+}
+.pesquisa-b{
+  margin-left: 4px;
+  margin-right: auto;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #C92071;
+  color: white;
+  width: 88px;
+  transition: ease-in-out 0.3s;
+  border: 1px solid #C92071;
+}
+.pesquisa-b:hover{
+  scale: 105%;
+}
+.pesquisa-b:active{
+  background-color: white;
+  color: #C92071;
+  transition: ease-in-out 0.1s;
+}
+.Cadastro{
+  margin-right: 8px;
+  color: #C92071;
+}
+.Login{
+  padding: 4px;
+  width: 70px;
+  border-radius: 10px;
+  background-color: #C92071;
+  color: white;
+  border: none;
+  transition: ease-in-out 0.3s;
+}
+.Login:active{
+  background-color: white;
+  color: #C92071;
+  transition: ease-in-out 0.1s;
+  border: 1px solid #C92071;
+}
+.Login:hover{
+  scale: 105%;
+}
+
+.ul-nav{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+.links-l{
+  color: #C92071;
+  text-decoration: none;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 6px  solid transparent;
+  border-radius: 5px;
+  transition: 0.55s;
+}
+.links-l:hover{
+  border-bottom: 6px solid #C92071 ;
+  animation: tuntun;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+
+
+hr{
+  color: #C92071;
+}
+@keyframes tuntun{
+  0%{
+    scale: 100%;
+  }
+  50%{
+    scale: 90%;
+  }
+  100%{
+    scale: 100%;
+  }
+}
