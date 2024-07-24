@@ -1,5 +1,6 @@
 import product from "../Cadrs/product";
 import Card from "../Cadrs/Card";
+import './Cardcs.css'
 
 
 export default function ListagemHome() {
@@ -10,5 +11,5 @@ export default function ListagemHome() {
     );
   }
 
-  return <section className="section-Homel"><div className="col-cards">{cards}</div></section>;
+  return <section id="sec-h-cards"><div className="cardsec">{cards}</div></section>;
 } 

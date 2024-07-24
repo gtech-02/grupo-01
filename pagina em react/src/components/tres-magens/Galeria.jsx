@@ -11,6 +11,6 @@ let GaleriaFeita = [];
     );
   }
 
-  return <section className="element"> {GaleriaFeita} </section>
+  return <section className="element">{GaleriaFeita} </section>
 }
 
