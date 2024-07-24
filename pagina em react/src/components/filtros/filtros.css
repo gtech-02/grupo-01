@@ -4,8 +4,9 @@
 .filtros {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
-    margin: 0;
+    margin-top: -70px;
     float: left;
+    color: #C92071;
   }
   
   .container{

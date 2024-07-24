@@ -12,5 +12,5 @@ export default function Listagem() {
     );
   }
 
-  return <section className="cardsec"> <div className="col-cards">{cards}</div></section>
+  return <section > <div className="cardsec">{cards}</div></section>
 } 
