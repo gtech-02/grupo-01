@@ -4,11 +4,11 @@ import CardHome from "./CardsHome";
 
 export default function ListagemHome() {
   let cards = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 8; i++) {
     cards.push(
         <CardHome produto={product[i]} />
     );
   }
 
-  return <section><div className="col-md-4">{cards}</div></section>;
+  return <section className="section-Homel"><div className="col-cards">{cards}</div></section>;
 } 

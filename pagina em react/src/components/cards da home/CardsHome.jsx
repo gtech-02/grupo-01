@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './grupo-01/pagina em react/src/components/Cadrs/Cardc.css'
+import './Cardc.css'
 
 export default function CardHome({ produto }) {
   return (

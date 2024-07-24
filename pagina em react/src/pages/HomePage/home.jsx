@@ -1,14 +1,16 @@
 import React from 'react'
 import Slide from '../../components/Slide/Slide'
-import Gallery from '../../components/tres-magens/Gallery'
+import Galeria from '../../components/tres-magens/Galeria'
 import { Layout } from '../../Layout'
+import ListagemHome from '../../components/cards da home/CardsHomefunc'
 function Home() {
 
   return (
     <>
       <Layout>
         <Slide />
-        <Gallery />
+        <Galeria />
+        <ListagemHome/>
       </Layout>
     </>
   )
