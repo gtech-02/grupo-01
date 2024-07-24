@@ -5,9 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    float: left;
   }
   
   .container{
@@ -17,9 +15,10 @@
   }
   
   .filters{
-    width: 20%;
+    width: 100%;
     padding: 10px;
     border-right: 5px solid rgb(255, 12, 113);
+    float: left;
   }
   
   .filter-group{
