@@ -13,27 +13,38 @@ function ProductView() {
 
   return (
     <>
-      <div className="view-card">
-        <div>
-          <img src={product.image} class="card-img-top" alt={product.nome} />
+      <div className="img-full">
+        <div className="view-card">
+          <div>
+            <img src={product.image} class="card-img-top" alt={product.nome} />
+          </div>
+
+          <div className="mini-cards">
+            <div id="card-und" class="card" aria-hidden="true">
+              <img src={product.image} class="card-img-top" alt={product.nome} />
+            </div>
+            <div id="card-und" class="card" aria-hidden="true">
+              <img src={product.image} class="card-img-top" alt={product.nome} />
+            </div>
+            <div id="card-und" class="card" aria-hidden="true">
+              <img src={product.image} class="card-img-top" alt={product.nome} />
+            </div>
+            <div id="card-und" class="card" aria-hidden="true">
+              <img src={product.image} class="card-img-top" alt={product.nome} />
+            </div>
+          </div>
         </div>
 
-        <div className="mini-cards">
-          <div class="card" aria-hidden="true">
-            <img src={product.image} class="card-img-top" alt={product.nome} />
-          </div>
-          <div class="card" aria-hidden="true">
-            <img src={product.image} class="card-img-top" alt={product.nome} />
-          </div>
-          <div class="card" aria-hidden="true">
-            <img src={product.image} class="card-img-top" alt={product.nome} />
-          </div>
-          <div class="card" aria-hidden="true">
-            <img src={product.image} class="card-img-top" alt={product.nome} />
-          </div>
+        <div className="detalhes">
+          <h1>{product.nome}</h1>
+          <h2>{product.qualidades}</h2>
+          <p>R$ {product.preco}</p>
+          <h6>Descrição: {product.descricao}</h6>
+          <button>Comprar</button>
         </div>
+
       </div>
-        
+
     </>
         );
   }
