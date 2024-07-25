@@ -19,7 +19,7 @@ export default function Header() {
 
             <Link to="/" className="links-l"><li>Home</li></Link>
             <Link to="/Produtos"className="links-l"><li>Produtos</li></Link>
-            <Link to="/Contatos" className="links-l"><li>Contatos</li></Link>
+            {/* <Link to="/Contatos" className="links-l"><li>Contatos</li></Link> */}
             {/* <a href="#" className="links-l"><li>Produtos</li></a>
             <a href="#" className="links-l"><li>Contatos</li></a>  */}
         </ul>
