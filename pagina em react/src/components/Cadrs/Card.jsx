@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Card({ produto }) {
   console.log(produto )
   return ( 
-    <div className="card">
+    <div className="cardList">
       <Link to={`/Produtos/${produto.id}`}>
         <img src={produto.image} className="card-img-top" alt="Produto" />
         <div className="card-body">

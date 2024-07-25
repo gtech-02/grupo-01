@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import products from "../../components/Cadrs/product";
+import './ProductView.css'
 
 function ProductView() {
   let { id } = useParams();
@@ -12,25 +13,26 @@ function ProductView() {
 
   return (
     <>
-      <div>
-        <img src={product.image} class="card-img-top" alt={product.nome} />
-      </div>
+      <div className="view-card">
+        <div>
+          <img src={product.image} class="card-img-top" alt={product.nome} />
+        </div>
 
-      <div className="">
-        <div class="card" aria-hidden="true">
-          <img src={product.image} class="card-img-top" alt={product.nome} />
-        </div>
-        <div class="card" aria-hidden="true">
-          <img src={product.image} class="card-img-top" alt={product.nome} />
-        </div>
-        <div class="card" aria-hidden="true">
-          <img src={product.image} class="card-img-top" alt={product.nome} />
-        </div>
-        <div class="card" aria-hidden="true">
-          <img src={product.image} class="card-img-top" alt={product.nome} />
+        <div className="mini-cards">
+          <div class="card" aria-hidden="true">
+            <img src={product.image} class="card-img-top" alt={product.nome} />
+          </div>
+          <div class="card" aria-hidden="true">
+            <img src={product.image} class="card-img-top" alt={product.nome} />
+          </div>
+          <div class="card" aria-hidden="true">
+            <img src={product.image} class="card-img-top" alt={product.nome} />
+          </div>
+          <div class="card" aria-hidden="true">
+            <img src={product.image} class="card-img-top" alt={product.nome} />
+          </div>
         </div>
       </div>
-        
         
     </>
         );
