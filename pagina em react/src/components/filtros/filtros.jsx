@@ -4,19 +4,7 @@ function Filtros() {
     return (
         <>
             <section className='filtros'>
-                <form>
-                    <div id='ordem' className="form-row align-items-center">
-                        <div className="col-auto my-1">
-                            <label className="mr-sm-2 sr-only" for="inlineFormCustomSelect"><h2>Ordenar por:</h2></label>
-                            <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Preço:</option>
-                                <option value="1">Maior preço</option>
-                                <option value="2">Menor preço</option>
-                                <option value="3">Todos</option>
-                            </select>
-                        </div>
-                    </div>
-                </form >
+            
                 <div className="container">
                     <div className="filters">
                         <h2>Filtrar por:</h2>
@@ -33,9 +21,9 @@ function Filtros() {
 
                         <div id="category" className="filter-group">
                             <h3>Gênero:</h3>
-                            <input type="checkbox" name="category" value="Produtos" /> <label>Feminino</label>
-                            <input type="checkbox" name="category" value="Produtos" /> <label>Masculino</label>
-                            <input type="checkbox" name="category" value="Produtos" /> <label>Unissex</label>
+                            <label><input type="checkbox" name="category" value="Produtos" /> Feminino</label>
+                            <label><input type="checkbox" name="category" value="Produtos" /> Masculino</label>
+                            <label><input type="checkbox" name="category" value="Produtos" /> Unissex</label>
                         </div>
                         <div className="filter-group">
                             <h3>Preço:</h3>
@@ -57,7 +45,7 @@ function Filtros() {
                             <label><input type="checkbox" name="brand" value="Tamanhos" /> 34 a 36</label>
                             <label><input type="checkbox" name="brand" value="Tamanhos" /> 37 a 40</label>
                             <label><input type="checkbox" name="brand" value="Tamanhos" /> 41 a 44</label>
-                            <button className='b-f' id="apply-filters"><h4>Filtros</h4></button>
+                            <button className='b-f' id="apply-filters"><h4>Filtrar</h4></button>
                         </div>
                     </div>
                 </div>
