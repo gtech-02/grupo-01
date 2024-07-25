@@ -14,7 +14,7 @@ export default [
     qualidades: "Azul/azul claro",
     preco: "R$ 279,99",
     descricao: "Desenvolvido para proporcionar uma experiência única, este tênis combina tecnologia de ponta com um design moderno que eleva seu estilo durante os treinos e corridas. O amortecimento responsivo presente no Revolution 7 garante um conforto incomparável a cada impacto, permitindo que você ultrapasse seus limites com confiança.",
-    id: 3,
+    id: 2,
   },
   
   {
@@ -23,7 +23,7 @@ export default [
     qualidades: "Preto",
     preco: "R$ 359,99",
     descricao: "Foi desenvolvido para oferecer conforto e performance em suas atividades físicas. A parte superior em mesh proporciona respirabilidade e um ajuste confortável. A entressola em EVA com tecnologia SoftierFoam garante excelente amortecimento e suavidade a cada passo.",
-    id: 2,
+    id: 3,
   },
   {
     nome: "Tênis Olympikus Corre 3 - Unissex",

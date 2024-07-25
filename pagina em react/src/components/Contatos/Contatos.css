@@ -8,19 +8,24 @@
     color: #1F1F1F;
 }
 
+<<<<<<< HEAD
 .bt-cont {
+=======
+.buttonVini {
+>>>>>>> 6aed2661188e07eeeb6d2568d39581e41049d581
     width: 100%;
     height: 70%;
     background-color: #C92071;
     margin: 65px;
     margin-top: 150px;
     padding: 40px;
+    border-radius: 20px;
 }
 
-.background {
+.backgroundVini {
     margin-bottom: 10px;
 }
 
-.img {
+.imgVini {
     margin-bottom: 20px;
 } */
