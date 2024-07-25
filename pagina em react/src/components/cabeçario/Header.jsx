@@ -18,7 +18,7 @@ export default function Header() {
         <ul className="ul-nav">
 
             <Link to="/" className="links-l"><li>Home</li></Link>
-            <Link to="/" element="" className="links-l"><li>Produtos</li></Link>
+            <Link to="/Produtos"className="links-l"><li>Produtos</li></Link>
             <Link to="/" className="links-l"><li>Contatos</li></Link>
             {/* <a href="#" className="links-l"><li>Produtos</li></a>
             <a href="#" className="links-l"><li>Contatos</li></a>  */}
