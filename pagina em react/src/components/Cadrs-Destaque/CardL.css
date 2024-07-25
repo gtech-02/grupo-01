@@ -1,0 +1,110 @@
+.Card-Lanç{
+    width: 270px;
+    height: 400px;
+    border: 2px solid #C92071;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px;
+
+}
+.Lanç-img{
+    width: 250px;
+    height: 250px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+.Lanç-texto{
+    font-size: 10px;
+    text-align: center;
+    width: 270px;
+}
+.lanç-completo{
+    width: 900px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+}
+.Lanç{
+    margin: 0;
+    color: #C92071;
+    animation-name: balança;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.Lanç-nome{
+    font-size: 28px;
+    margin: 0;
+    color: #C92071;
+}
+.Lanç-qual{
+    margin: 0;
+    font-size: 20px;
+}
+.Lanç-preço{
+    font-size: 25px;
+    margin: 0;
+}
+.Lanç-Bt{
+    padding: 7px;
+    font-size: 26px;
+    border: 1px solid #C92071;
+    background-color: #C92071;
+    color: white;
+    border-radius: 8px;
+    margin-top: 0px;
+
+}
+.Lanç-Bt:hover{
+    scale: 105%;
+    animation: mecompra;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+}
+.Lanç-Bt:active{
+    background-color: white;
+    color: #C92071;
+    transition: ease-in-out 0.05s;
+}
+
+@keyframes balança{
+    0%{
+        transform:rotateZ(0deg);
+    }
+    10%{
+        transform: rotateZ(10deg);
+    }
+    20%{
+        transform: rotateZ(-10deg);
+    }
+    30%{
+        transform: rotateZ(10deg);
+    }
+    40%{
+        transform: rotateZ(-10deg);
+    }
+    50%{
+        transform: rotateZ(0deg);
+    }
+}
+@keyframes mecompra{
+    0%{
+        scale: 100%;
+    }
+    15%{
+        scale: 110%;
+    }
+    30%{
+        scale: 100%;
+    }
+    45%{
+        scale: 110%;
+    }
+    60%{
+        scale: 100%;
+    }
+}

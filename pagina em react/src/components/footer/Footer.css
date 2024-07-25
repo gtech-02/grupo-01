@@ -59,7 +59,14 @@ ul {
 	font-size: 12px;
 	margin-bottom: 10px;
 }
-
+.button:hover{
+	scale: 105%;
+}
+.button:active{
+	background-color: white;
+	color: #e91e63;
+	transition: ease-in-out 0.05s;
+}
 .footer-col h3::before {
 	content: '';
 	position: absolute;
