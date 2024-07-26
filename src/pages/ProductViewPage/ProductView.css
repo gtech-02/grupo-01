@@ -1,0 +1,87 @@
+#card-und {
+    padding: 10px;
+}
+
+.mini-cards {
+    display: flex;
+    gap: 5px;
+}
+
+.view-card {
+    margin-left: 0px;
+    padding: 0px;
+    display: block;
+    height: 500px;
+    width: 500px;
+}
+
+.view-card {
+    height: 100px;
+}
+
+.img-full {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 20px;
+    height: 700px;
+    justify-content: center;
+}
+
+.detalhes {
+    display: inline;
+    width: 400px;
+    margin: 10px;
+}
+
+.detalhes h1 {
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.detalhes h2 {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #F5F5F5;
+}
+
+.detalhes h6 {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #F5F5F5;
+}
+
+.details-top {
+    display: block;
+    width: 500px;
+}
+
+.details-bottom {
+    gap: 50px;
+}
+
+.details-bottom p {
+    font-weight: bold;
+}
+
+.details-bottom button{
+    background-color: #C92071;
+    width: 500px;
+    border-radius: 8px;
+    color: white;
+    border: 1px solid #C92071;
+    transition: ease-in-out 0.3s;
+    font-weight: bold;
+    font-size: 15px;
+    height: 40px;
+}
+.details-bottom button:hover{
+    scale: 105%;
+  }
+  .details-bottom button:active{
+    background-color: white;
+    color: #C92071;
+    transition: ease-in-out 0.1s;
+  }
