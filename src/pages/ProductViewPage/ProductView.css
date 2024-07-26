@@ -1,0 +1,31 @@
+#card-und {
+    padding: 10px;
+}
+
+.mini-cards {
+    display: flex;
+    gap: 5px;
+}
+
+.view-card {
+    margin-left: 0px;
+    padding: 0px;
+    display: block;
+    height: 500px;
+    width: 500px;
+}
+
+.view-card {
+    height: 100px;
+}
+
+.img-full {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+
+.detalhes {
+    display: inline;
+    width: 400px;
+    margin: 10px;
+}
