@@ -1,6 +1,6 @@
 import React from "react";
-import "./Header.css"
 import { Link } from "react-router-dom";
+import "./Header.css"
 
 export default function Header() {
     return (
@@ -16,9 +16,12 @@ export default function Header() {
     <hr></hr>
     <div className="navbar">
         <ul className="ul-nav">
-            <Link to="/"  className="links-l">Home</Link>
-            <Link to="/Produtos"  className="links-l">Produtos</Link>
-            <Link to="/Contatos"  className="links-l">Contatos</Link>
+
+            <Link to="/" className="links-l"><li>Home</li></Link>
+            <Link to="/Produtos"className="links-l"><li>Produtos</li></Link>
+            {/* <Link to="/Contatos" className="links-l"><li>Contatos</li></Link> */}
+            {/* <a href="#" className="links-l"><li>Produtos</li></a>
+            <a href="#" className="links-l"><li>Contatos</li></a>  */}
         </ul>
     </div>
 </header>

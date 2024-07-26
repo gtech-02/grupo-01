@@ -2,7 +2,7 @@ import React from "react"
 import './Gallery.css'
 
 
-export default function Gallery({complementos}) {
+export default function FuncGallery({gallery}) {
 
 
   return (
@@ -11,10 +11,10 @@ export default function Gallery({complementos}) {
         <h1 className="g-titulo">Lançamentos !!!</h1>
       </div>
       <div>
-        <img className="img-g" src={complementos.image} />
+        <img className="img-g" src={gallery.image} />
       </div>
       <div className="div-sm">
-        <button id={complementos.id} className="s-m">Saiba Mais</button>
+        <button id={gallery.id} className="s-m">Saiba Mais</button>
       </div>
     </div>
   )

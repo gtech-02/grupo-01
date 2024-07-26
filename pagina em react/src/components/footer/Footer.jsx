@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="row row-cols-4">
           <div className="footer-col">
             <h3>Informção</h3>
-            <ul>
+            <ul className="list">
               <li><a href="#">Sobre Drip Store</a></li>
               <li><a href="#">Segurança</a></li>
               <li><a href="#">Wishlist</a></li>
@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h3>Categorias</h3>
-            <ul>
+            <ul className="list">
               <li><a href="#">Camisetas</a></li>
               <li><a href="#">Calças</a></li>
               <li><a href="#">Bonés</a></li>
