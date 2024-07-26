@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import products from "../../components/Cadrs/product";
+import { Layout } from "../../Layout";
 import './ProductView.css'
 
 function ProductView() {
@@ -13,6 +14,7 @@ function ProductView() {
 
   return (
     <>
+    <Layout>
       <div className="img-full">
         <div className="view-card">
           <div>
@@ -34,25 +36,24 @@ function ProductView() {
             </div>
           </div>
         </div>
-
-        <div className="detalhes">
-          <h1>{product.nome}</h1>
-          <h2>{product.qualidades}</h2>
-          <p>R$ {product.preco}</p>
-          <h6>Descrição: {product.descricao}</h6>
-          <button>Comprar</button>
+        
+        <div className="details-top">
+          <div className="detalhes">
+            <h1>{product.nome}</h1>
+            <h2>{product.qualidades}</h2>
+            <h6>Descrição: {product.descricao}</h6>
+          </div>
+          <div className="details-bottom">
+            <p>R$ {product.preco}</p>
+            <button>Comprar</button>
+          </div>
         </div>
-
       </div>
 
-    </>
-        );
-  }
-        {/* <h2>{product.nome}</h2>
-    // <img src={product.image} class="card-img" alt={product.nome} />
-<img src={product.image} alt={product.nome} />
-<p>Qualidades: {product.qualidades}</p>
-<p>Preço: {product.preco}</p>
-<p>Descrição: {product.descricao}</p> */}
+      </Layout>
 
-        export default ProductView;
+    </>
+  );
+}
+
+ export default ProductView;
