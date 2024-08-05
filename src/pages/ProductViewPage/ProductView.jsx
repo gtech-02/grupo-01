@@ -44,7 +44,7 @@ function ProductView() {
             <h6>Descrição: {product.descricao}</h6>
           </div>
           <div className="details-bottom">
-            <p>R$ {product.preco}</p>
+            <p> {product.preco}</p>
             <button>Comprar</button>
           </div>
         </div>

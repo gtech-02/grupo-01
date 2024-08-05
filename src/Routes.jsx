@@ -2,7 +2,7 @@ import Home from "./pages/HomePage/HomePage"
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import ProductViewPage from './pages/ProductViewPage/ProductView';
 import ProductListiningPage from './pages/ProductListingPage/Productlistingpage';
-// import ProductsPage from './pages/ProductsPage';
+import Products from './pages/ProductListingPage/Productlistingpage'
 
 
 const Rotas = () => {
