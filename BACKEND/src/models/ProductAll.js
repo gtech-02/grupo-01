@@ -40,7 +40,11 @@ const ProductAll = connection.define('products shoes', {
     price_witch_discount: {
         type: DataTypes.false,
         allowNull: false
-    }
+    },
+
+    define: {
+        timestamps: true,
+    },
 });
 
 module.exports = ProductAll;
