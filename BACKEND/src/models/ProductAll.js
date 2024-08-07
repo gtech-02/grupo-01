@@ -1,11 +1,7 @@
 const connection = require('../database/connection');
 const { DataTypes } = require('sequelize');
 
-const ProductAll = connection.define('shoes', {
-    id: {
-        type: DataTypes.INTEGER
-    },
-    
+const ProductAll = connection.define('shoes', {  
     enabled: {
         type: DataTypes.BOOLEAN,
     },
@@ -38,13 +34,10 @@ const ProductAll = connection.define('shoes', {
     },
 
     price_witch_discount: {
-        type: DataTypes.false,
+        type: DataTypes.FLOAT,
         allowNull: false
     },
 
-    define: {
-        timestamps: true,
-    },
 });
 
 module.exports = ProductAll;

@@ -3,10 +3,6 @@ const { DataTypes } = require('sequelize');
 
 const UserName = connection.define('user', {
     
-    id: {
-        type: DataTypes.INTEGER
-    },
-    
     firstname: {
         type: DataTypes.STRING(100),
         allowNull: false
@@ -25,10 +21,6 @@ const UserName = connection.define('user', {
     password: {
         type: DataTypes.STRING(100),
         allowNull: false
-    },
-    
-    define: {
-        timestamps: true,
     },
 });
 
