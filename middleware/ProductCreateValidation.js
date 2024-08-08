@@ -17,7 +17,7 @@ const ProductCreateValidation = async (request, response, next) => {
             message: 'o preço é obrigatorio'
         })
     }
-    
+    next()
 }
 
 module.exports = ProductCreateValidation
