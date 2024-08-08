@@ -4,6 +4,7 @@ const { DataTypes } = require('sequelize');
 const ProductAll = connection.define('shoes', {  
     enabled: {
         type: DataTypes.BOOLEAN,
+        defaultValue: 0
     },
 
     name: {
@@ -18,6 +19,7 @@ const ProductAll = connection.define('shoes', {
 
     use_in_menu: {
         type: DataTypes.BOOLEAN,
+        defaultValue: 0
     },
 
     stock: {
