@@ -27,4 +27,4 @@ const ProductImage = connection.define('image-products',{
     }
 })
 
-module.export= ProductImage
+module.exports = ProductImage

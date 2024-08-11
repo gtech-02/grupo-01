@@ -27,4 +27,4 @@ const ProductAndCategory = connection.define('category-and-product'{
     }
 })
 
-module.export = ProductAndCategory
+module.exports = ProductAndCategory

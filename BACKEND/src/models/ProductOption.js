@@ -41,4 +41,4 @@ const ProductOption = connection.define('option-product',{
     },
 })
 
-module.export = ProductOption
+module.exports = ProductOption
