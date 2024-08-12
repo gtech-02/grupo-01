@@ -1,16 +1,17 @@
+const { SELECT } = require('sequelize/types/query-types');
 const ProductAll = require('../models/ProductAll');
 
 const ProductContoller = {
     async create(request, response){
         request
         ProductAll.create(request.body);
-        return response.json({
+        return response.status(201).json({
             message: "produto cadastrado"
         })
       },
 
     async list(request, response){
-        let productsList = await ProductAll.findAll();
+        let productsList = await ProductAll.findAll(SELECT);
         return response.json(productsList)
     },
     
