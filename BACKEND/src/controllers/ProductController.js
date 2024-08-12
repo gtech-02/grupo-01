@@ -3,7 +3,7 @@ const ProductAll = require('../models/ProductAll');
 const ProductContoller = {
     async create(request, response){
         request
-        ProductModel.create(request.body);
+        ProductAll.create(request.body);
         return response.json({
             message: "produto cadastrado"
         })

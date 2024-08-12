@@ -23,7 +23,8 @@ const ProductAll = connection.define('shoes', {
     },
 
     stock: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        defaultValue: 0
     },
 
     description: {
