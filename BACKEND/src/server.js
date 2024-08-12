@@ -14,5 +14,4 @@ app.delete('/products/:id', ProductController.delete)
 app.get('/v1/category/search', CategoryController)
 
 
-app.listen(5001);
 app.listen(5000);
