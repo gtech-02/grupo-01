@@ -14,7 +14,7 @@ const ProductContoller = {
     },
     
     async update(request, response){
-    let id = request.params.id;
+        let id = request.params.id;
         ProductAll.update(request.body, {
             where:{ id }
         })

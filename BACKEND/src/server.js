@@ -19,6 +19,6 @@ app.get('/v1/category/search', CategoryController)
 app.post('/users',UserController.create)
 app.get('/users',UserController.list)
 app.put('/users',UserController.update)
-app.delete('/users',UserController.delete)
+app.delete('/users',UserController.create)
 
 app.listen(3002);
