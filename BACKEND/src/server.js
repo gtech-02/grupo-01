@@ -14,7 +14,11 @@ app.post('/products',ProductCreateValidation, ProductController.create)
 app.get('/products', ProductController.list)
 app.put('/products/:id',ProductUpdateValidation, ProductController.update)
 app.delete('/products/:id', ProductController.delete)
-app.get('/v1/category/search', CategoryController)
+
+app.post('/Category', CategoryValidaçao,CategoryController.create)
+app.get('/Category', CategoryController.list)
+app.put('/Category/:id', CategoryController.update)
+app.delete('/Category/:id', CategoryController.delete)
 
 app.post('/users',UserController.create)
 app.get('/users',UserController.list)
