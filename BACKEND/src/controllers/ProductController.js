@@ -17,7 +17,7 @@ const ProductContoller = {
     
     async update(request, response){
         let id = request.params.id;
-        ProductAll.update(request.body,{
+        ProductAll.update(request.body, {
             where:{ id }
         })
         return response.json({

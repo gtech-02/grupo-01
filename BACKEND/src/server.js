@@ -12,7 +12,10 @@ app.post('/products',ProductCreateValidation, ProductController.create)
 app.get('/products', ProductController.list)
 app.put('/products/:id', ProductController.update)
 app.delete('/products/:id', ProductController.delete)
-app.get('/v1/category/search', CategoryController)
 
+app.post('/Category', CategoryController.create)
+app.get('/Category', CategoryController.list)
+app.put('/Category', CategoryController.update)
+app.delete('/Category', CategoryController.delete)
 
 app.listen(5000);

@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize');
 const ProductAll = require('./ProductAll');
 const CategoriaModel = require('./CategoriaModel');
 
-const ProductAndCategory = connection.define('category-and-product'{
+const ProductAndCategory = connection.define('category-and-product', {
 
     product_id:{
         type: DataTypes.INTEGER,
