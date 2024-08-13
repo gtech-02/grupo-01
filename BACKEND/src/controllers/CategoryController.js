@@ -1,5 +1,4 @@
-import { Model } from 'sequelize';
-import { list } from './ProductController';
+
 
 const CategoriaModels = require('../models/CategoriaModel');
 

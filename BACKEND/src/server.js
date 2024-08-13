@@ -6,16 +6,19 @@ app.use(express.json());
 const ProductController = require('./controllers/ProductController');
 const ProductCreateValidation = require('./middlewares/ProductMiddleware/ProductCreateValidation');
 const CategoryController = require('./controllers/CategoryController');
-
+const UserController = require('./controllers/UserController');
+const CategoryValidaçao = require('./middlewares/CategoryMiddlewares/CategoryValidaçao')
 
 app.post('/products',ProductCreateValidation, ProductController.create)
 app.get('/products', ProductController.list)
 app.put('/products/:id', ProductController.update)
 app.delete('/products/:id', ProductController.delete)
 
-app.post('/Category', CategoryController.create)
+app.post('/Category', CategoryValidaçao,CategoryController.create)
 app.get('/Category', CategoryController.list)
-app.put('/Category', CategoryController.update)
-app.delete('/Category', CategoryController.delete)
+app.put('/Category/:id', CategoryController.update)
+app.delete('/Category/:id', CategoryController.delete)
 
-app.listen(5000);
+app.post('/users',UserController.create)
+
+app.listen(5004);

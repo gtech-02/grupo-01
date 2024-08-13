@@ -1,4 +1,3 @@
-const { SELECT } = require('sequelize/types/query-types');
 const ProductAll = require('../models/ProductAll');
 
 const ProductContoller = {
@@ -11,7 +10,7 @@ const ProductContoller = {
       },
 
     async list(request, response){
-        let productsList = await ProductAll.findAll(SELECT);
+        let productsList = await ProductAll.findAll();
         return response.json(productsList)
     },
     
