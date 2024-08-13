@@ -1,7 +1,8 @@
 const UserName = require('../models/UserName')
-
+const bcrypt = require('bcrypt')
 const UserController = {
     async create (request, response){
+        let hash = await bcrypt.hash(request.body.password, 9); request.body.password = hash
         UserName.create(request.body);
         return response.status(201).json({
             message: "usuário cadastrado"
