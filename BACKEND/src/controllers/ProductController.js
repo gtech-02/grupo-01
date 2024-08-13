@@ -1,4 +1,4 @@
-const { SELECT } = require('sequelize/types/query-types');
+
 const ProductAll = require('../models/ProductAll');
 
 const ProductContoller = {
@@ -11,12 +11,12 @@ const ProductContoller = {
       },
 
     async list(request, response){
-        let productsList = await ProductAll.findAll(SELECT);
+        let productsList = await ProductAll.findAll();
         return response.json(productsList)
     },
     
     async update(request, response){
-        let id = request.params.id;
+    let id = request.params.id;
         ProductAll.update(request.body,{
             where:{ id }
         })
