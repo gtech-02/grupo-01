@@ -15,6 +15,7 @@ const ProductContoller = {
     
     async update(request, response){
         let id = request.params.id;
+
         ProductAll.update(request.body, {
             where:{ id }
         })
@@ -25,6 +26,7 @@ const ProductContoller = {
 
     async delete(request, response){
         let id = request.params.id;
+
         ProductAll.destroy({
             where:{ id }
         });
