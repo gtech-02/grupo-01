@@ -8,6 +8,7 @@ const ProductCreateValidation = require('./middlewares/ProductMiddleware/Product
 const CategoryController = require('./controllers/CategoryController');
 const ProductUpdateValidation = require('./middlewares/ProductMiddleware/ProductUpdateValidation');
 const UserController = require('./controllers/UserController');
+const CategoryValidaçao = require('./middlewares/CategoryMiddlewares/CategoryValidaçao');
 
 
 app.post('/products',ProductCreateValidation, ProductController.create)
