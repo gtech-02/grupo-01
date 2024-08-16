@@ -2,12 +2,64 @@ const UserName = require('../models/UserName')
 const bcrypt = require('bcrypt')
 const UserController = {
     async create (request, response){
-        let hash = await bcrypt.hash(request.body.password, 9); request.body.password = hash
-        UserName.create(request.body);
+
+        try {
+            const { surname, firstname, password, email } = request.body;
+
+            // Verifica se os campos existem
+            if (!surname || !firstname || !password || !email) {
+                return response.status(400).json({
+                    message: "Nome de usuário e senha são obrigatórios"
+                });
+            }
+
+            // Verifica se o usuario digitou um email existente
+            const emailExisting = await UserName.findOne({ where: { email: email } });
+            if (emailExisting) {
+                return response.status(400).json({
+                    message: "email ja existente"
+                });
+            }
+
+        }
+        catch (error) {
+            // Trata erros
+            console.error('Erro ao criar usuário:', error);
+            return response.status(400).json({
+                message: "Erro ao cadastrar usuário"
+            });
+        }
+
+        //cria a senha com o hash
+        const hash = await bcrypt.hash(request.body.password, 9);
+        request.body.password = hash;
+        await UserName.create(request.body);
         return response.status(201).json({
             message: "usuário cadastrado"
+        });
+    },
+    async login(request, response){
+        let emailL = request.body.email;
+        let passwordL = request.body.password;
+        if (!emailL || !passwordL){
+            return response.status(400).json({
+                message: "email e senha são obrigatórios"
+            })}
+        let user = await UserName.findOne({
+            where: {email: emailL}
+        });
+        let userPassword = user ? user.password:""
+        let hasValid = await bcrypt.compare(passwordL, userPassword)
+        if(hasValid){
+            return response.status(200).json({
+                message: "usuario logado"
+            })
+        }else{
+            return response.status(404).json({
+                message: "credenciais invalidas"
+            })
         }
-        )
+         
     },
     async list(request, response){
         let userlist = await UserName.findAll();
