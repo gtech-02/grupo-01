@@ -13,7 +13,7 @@ const ProductCreateValidation = require('./middlewares/ProductMiddleware/Product
 const ProductUpdate_DeleteValidation = require('./middlewares/ProductMiddleware/ProductUpdate_DeleteValidation');
 const CategoryPut_DeleteValidation = require('./middlewares/CategoryMiddlewares/CategoryPut_DeleteValidation');
 const UserPut_DeleteValidadtion = require('./middlewares/UsersMiddlewares/UserPut_DeleteValidation');
-
+const UserCreateValidation = require('./middlewares/UsersMiddlewares/UserCreateValidation');
 
 app.post('/products',ProductCreateValidation, ProductController.create)
 app.get('/products', ProductController.list)
@@ -25,9 +25,10 @@ app.get('/Category', CategoryController.list)
 app.put('/Category/:id',CategoryPut_DeleteValidation, CategoryController.update)
 app.delete('/Category/:id',CategoryPut_DeleteValidation, CategoryController.delete)
 
-app.post('/users',UserController.create)
+app.post('/users',UserCreateValidation,UserController.create)
 app.get('/users',UserController.list)
 app.put('/users/:id',UserPut_DeleteValidadtion, UserController.update)
 app.delete('/users/:id',UserPut_DeleteValidadtion, UserController.delete)
+app.post('/users/login',UserController.login )
 
 app.listen(3002);

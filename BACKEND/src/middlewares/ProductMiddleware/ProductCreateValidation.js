@@ -20,16 +20,17 @@ const ProductCreateValidation = async (request, response, next) => {
             message:"o preço do produto é obrigatorio"
         })
     }
-    if(!request.body.price){
+    if(!request.body.price_witch_discount){
         return response.status(400).json({
             message:"o preço com desconto é obrigatorio"
         })
     }
-    if(request.body.price != FLOAT){
+    if(isNaN(request.body.price) || isNaN(request.body.price_wi)){
         return response.status(400).json({
-            message: "o campo preço so aceita numeros."
+            message:"o campo price so aceita valores FLOAT"
         })
     }
+
 
     next();
 }
