@@ -1,5 +1,6 @@
 const { request, response } = require("express");
 const ProductAll = require("../../models/ProductAll");
+const { FLOAT } = require("sequelize");
 
 const ProductCreateValidation = async (request, response, next) => {
     if(!request.body.name){
@@ -22,6 +23,11 @@ const ProductCreateValidation = async (request, response, next) => {
     if(!request.body.price){
         return response.status(400).json({
             message:"o preço com desconto é obrigatorio"
+        })
+    }
+    if(request.body.price != FLOAT){
+        return response.status(400).json({
+            message: "o campo preço so aceita numeros."
         })
     }
 
