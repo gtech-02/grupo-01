@@ -20,9 +20,9 @@ app.get('/Category', CategoryController.list)
 app.put('/Category/:id', CategoryController.update)
 app.delete('/Category/:id', CategoryController.delete)
 
-app.post('/users',UserController.create)
+app.post('/v1/user/token',UserController.create)
 app.get('/users',UserController.list)
 app.put('/users',UserController.update)
 app.delete('/users',UserController.create)
 
-app.listen(3002);
+app.listen(5002);

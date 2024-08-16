@@ -4,22 +4,22 @@ const { DataTypes } = require('sequelize');
 const UserName = connection.define('user', {
     
     firstname: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
     
     surname: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
     
     email: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
     
     password: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
 });

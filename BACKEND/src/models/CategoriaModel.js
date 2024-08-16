@@ -4,11 +4,11 @@ const { DataTypes } = require('sequelize');
 const CategoriaModel = connection.define('category',{
 
     name:{
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
     slug: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
     use_in_menu:{
