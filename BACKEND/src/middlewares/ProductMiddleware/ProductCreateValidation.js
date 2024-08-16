@@ -1,6 +1,6 @@
 const { request, response } = require("express");
 const ProductAll = require("../../models/ProductAll");
-const { FLOAT } = require("sequelize");
+const { FLOAT, STRING } = require("sequelize");
 
 const ProductCreateValidation = async (request, response, next) => {
     if(!request.body.name){
@@ -25,9 +25,14 @@ const ProductCreateValidation = async (request, response, next) => {
             message:"o preço com desconto é obrigatorio"
         })
     }
-    if(isNaN(request.body.price) || isNaN(request.body.price_wi)){
+    if(isNaN(request.body.price) || isNaN(request.body.price_witch_discount)){
         return response.status(400).json({
-            message:"o campo price so aceita valores FLOAT"
+            message:"o campo price and price with discount"
+        })
+    }
+    if(typeof request.body.name ==  String){
+        return response.json({
+            message: "ta funcinando"
         })
     }
 
