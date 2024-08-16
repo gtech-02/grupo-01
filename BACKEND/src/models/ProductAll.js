@@ -8,12 +8,12 @@ const ProductAll = connection.define('shoes', {
     },
 
     name: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
     
     slug: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
 

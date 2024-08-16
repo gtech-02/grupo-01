@@ -26,9 +26,10 @@ app.put('/Category/:id',CategoryPut_DeleteValidation, CategoryController.update)
 app.delete('/Category/:id',CategoryPut_DeleteValidation, CategoryController.delete)
 
 app.post('/users',UserCreateValidation,UserController.create)
+app.post('/v1/user/token',UserController.create)
 app.get('/users',UserController.list)
 app.put('/users/:id',UserPut_DeleteValidadtion, UserController.update)
 app.delete('/users/:id',UserPut_DeleteValidadtion, UserController.delete)
 app.post('/users/login',UserController.login )
 
-app.listen(3002);
+app.listen(5002);
