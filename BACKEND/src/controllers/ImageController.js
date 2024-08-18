@@ -14,7 +14,7 @@ const ImageController = {
     },
     async listarUma(request, response) {
         let id = request.params.id;
-        const image = await ImagesModel.findOne({
+        const image = await ProductImage.findOne({
             where:{
                 id:id
             }

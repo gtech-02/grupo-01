@@ -12,47 +12,51 @@ const OptionController = require('./controllers/OptionController')
 // validações
 const CategoryValidaçao = require('./middlewares/CategoryMiddlewares/CategoryValidaçao');
 const ProductCreateValidation = require('./middlewares/ProductMiddleware/ProductCreateValidation');
-
+const ImageCreateValidação = require('./middlewares/ProductImageMiddlewares/ImageCreateValidação');
+const OptionCreateValidation = require('./middlewares/OptionsMiddlewares/OptionCreateValidation');
 // Validações de existencia de ID
 const ProductUpdate_DeleteValidation = require('./middlewares/ProductMiddleware/ProductUpdate_DeleteValidation');
 const CategoryPut_DeleteValidation = require('./middlewares/CategoryMiddlewares/CategoryPut_DeleteValidation');
 const UserPut_DeleteValidadtion = require('./middlewares/UsersMiddlewares/UserPut_DeleteValidation');
+const OptionPut_Delete = require('./middlewares/OptionsMiddlewares/OptionPut_Delete');
+const ImagePut_Delete = require('./middlewares/ProductImageMiddlewares/ImagePut_Delete');
+
 
 //products
-app.post('/products',ProductCreateValidation, ProductController.create)
-app.get('/products', ProductController.list)
-app.put('/products/:id', ProductUpdate_DeleteValidation,ProductController.update)
-app.delete('/products/:id',ProductUpdate_DeleteValidation, ProductController.delete)
-
+app.post('/V1/products',ProductCreateValidation, ProductController.create)
+app.get('/V1/products', ProductController.list)
+app.put('/V1/products/:id', ProductUpdate_DeleteValidation,ProductController.update)
+app.delete('/V1/products/:id',ProductUpdate_DeleteValidation, ProductController.delete)
+app.get('/V1/products/:id',ProductUpdate_DeleteValidation,ProductController.listarUma)
 //category
-app.post('/Category', CategoryValidaçao,CategoryController.create)
-app.get('/Category', CategoryController.list)
-app.put('/Category/:id',CategoryPut_DeleteValidation, CategoryController.update)
-app.delete('/Category/:id',CategoryPut_DeleteValidation, CategoryController.delete)
+app.post('/V1/Category', CategoryValidaçao,CategoryController.create)
+app.get('/V1/Category', CategoryController.list)
+app.put('/V1/Category/:id',CategoryPut_DeleteValidation, CategoryController.update)
+app.delete('/V1/Category/:id',CategoryPut_DeleteValidation, CategoryController.delete)
 
 //user
-app.post('/users',UserController.create)
-app.post('/users',UserController.create)
-app.post('/v1/user/token',UserController.create)
-app.get('/users',UserController.list)
-app.put('/users/:id',UserPut_DeleteValidadtion, UserController.update)
-app.delete('/users/:id',UserPut_DeleteValidadtion, UserController.delete)
-app.post('/users/login',UserController.login )
+
+app.post('/V1/v1/user/token',UserController.create)
+app.get('/V1/users',UserController.list)
+app.get('/V1/users/:',UserPut_DeleteValidadtionUserController.listarUma)
+app.put('/V1/users/:id',UserPut_DeleteValidadtion, UserController.update)
+app.delete('/V1/users/:id',UserPut_DeleteValidadtion, UserController.delete)
+app.post('/V1/users/login',UserController.login )
 
 //image
-app.post('/images', ImageController.create)
-app.get('/images', ImageController.list)
-app.get('/images/:id', ImageController.listarUma)
-app.put('/images/:id', ImageController.update)
-app.delete('/images', ImageController.delete)
-app.delete('/images/:id', ImageController.deletaUma)
+app.post('/V1/images',ImageCreateValidação, ImageController.create)
+app.get('/V1/images', ImageController.list)
+app.get('/V1/images/:id',ImagePut_Delete, ImageController.listarUma)
+app.put('/V1/images/:id',ImagePut_Delete, ImageController.update)
+app.delete('/V1/images', ImageController.delete)
+app.delete('/V1/images/:id',ImagePut_Delete, ImageController.deletaUma)
 
 //option
-app.post('/option', OptionController.create)
-app.get('/option', OptionController.list)
-app.get('/option/:id', OptionController.listarUma)
-app.put('/option/:id', OptionController.update)
-app.delete('/option', OptionController.delete)
-app.delete('/option/:id', OptionController.deletaUma)
+app.post('/V1/option',OptionCreateValidation, OptionController.create)
+app.get('/V1/option', OptionController.list)
+app.get('/V1/option/:id',OptionPut_Delete, OptionController.listarUma)
+app.put('/V1/option/:id',OptionPut_Delete, OptionController.update)
+app.delete('/V1/option', OptionController.delete)
+app.delete('/V1/option/:id',OptionPut_Delete, OptionController.deletaUma)
 
 app.listen(3002);

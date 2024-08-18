@@ -13,6 +13,15 @@ const CategoryController = {
         const category = await CategoriaModels.findAll();
         response.json(category);
     },
+    async listarUma(request, response) {
+        let id = request.params.id;
+        const Categoria = await CategoriaModels.findOne({
+            where:{
+                id:id
+            }
+        })
+        return response.json(Categoria)
+    },
 
     async update(request, response){
         let id = request.params.id;

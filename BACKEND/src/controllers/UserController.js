@@ -65,6 +65,15 @@ const UserController = {
         let userlist = await UserName.findAll();
         return response.json(userlist)
     },
+    async listarUma(request, response) {
+        let id = request.params.id;
+        const User = await UserName.findOne({
+            where:{
+                id:id
+            }
+        })
+        return response.json(User)
+    },
     async update(request, response){
         let id = request.params.id;
         UserName.update(request.body,{

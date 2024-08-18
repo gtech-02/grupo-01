@@ -23,7 +23,7 @@ const ProductImage = connection.define('image-products',{
 
     path:{
         type: DataTypes.STRING(255),
-        allowNull: true
+        allowNull: false
     }
 })
 
