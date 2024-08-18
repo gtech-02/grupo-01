@@ -6,7 +6,7 @@ const connection = new Sequelize({
     dialect: 'mysql',
     database: 'loja',
     host: 'localhost',
-    port: '3306',
+    port: '5001',
     username: 'root',
     password: '1234'
 });

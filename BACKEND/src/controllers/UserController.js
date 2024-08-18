@@ -1,5 +1,6 @@
-const UserName = require('../models/UserName')
-const bcrypt = require('bcrypt')
+const UserName = require('../models/UserName');
+const bcrypt = require('bcrypt');
+const generateJwt = require('../helpers/jwtHelpers')
 const UserController = {
     async create (request, response){
 
@@ -52,14 +53,14 @@ const UserController = {
         let hasValid = await bcrypt.compare(passwordL, userPassword)
         if(hasValid){
             return response.status(200).json({
-                message: "usuario logado"
+                'token': generateJwt(user.id)
             })
         }else{
             return response.status(404).json({
                 message: "credenciais invalidas"
             })
         }
-         
+        
     },
     async list(request, response){
         let userlist = await UserName.findAll();

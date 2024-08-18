@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
+
+
+const { verifyJwtMiddleware } = require('./middlewares/JwtVerification/JwtVerifyToken');
+
+
 // controlers
 const ProductController = require('./controllers/ProductController');
 const CategoryController = require('./controllers/CategoryController');
@@ -38,7 +43,7 @@ app.delete('/V1/Category/:id',CategoryPut_DeleteValidation, CategoryController.d
 
 app.post('/v1/users/token',UserController.create)
 app.get('/V1/users',UserController.list)
-app.get('/V1/users/:',UserPut_DeleteValidadtionUserController.listarUma)
+app.get('/V1/users/:id',UserPut_DeleteValidadtion, UserController.listarUma)
 app.put('/V1/users/:id',UserPut_DeleteValidadtion, UserController.update)
 app.delete('/V1/users/:id',UserPut_DeleteValidadtion, UserController.delete)
 app.post('/V1/users/login',UserController.login )
@@ -59,4 +64,4 @@ app.put('/V1/option/:id',OptionPut_Delete, OptionController.update)
 app.delete('/V1/option', OptionController.delete)
 app.delete('/V1/option/:id',OptionPut_Delete, OptionController.deletaUma)
 
-app.listen(3002);
+app.listen(5002);
