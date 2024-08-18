@@ -1,7 +1,4 @@
 const { Sequelize } = require('sequelize');
-// let portlogin = 5001;
-// let usernamelogin = "root";
-// let passwordlogin = "1234"
 
 require('dotenv').config();
 
