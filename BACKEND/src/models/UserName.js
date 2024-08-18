@@ -15,7 +15,8 @@ const UserName = connection.define('user', {
     
     email: {
         type: DataTypes.STRING(225),
-        allowNull: false
+        allowNull: false,
+        unique: true
     },
     
     password: {

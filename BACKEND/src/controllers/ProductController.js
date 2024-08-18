@@ -1,6 +1,9 @@
 const ProductAll = require('../models/ProductAll');
+const ProductImage = require('../models/ProductImage');
+const ProductOption = require('../models/ProductOption');
 
 const ProductContoller = {
+    
     async create(request, response){
         ProductAll.create(request.body);
         return response.status(201).json({
@@ -9,10 +12,22 @@ const ProductContoller = {
       },
 
     async list(request, response){
-        let productsList = await ProductAll.findAll();
+        ProductAll.hasMany(ProductImage,{foreignKey: 'product_id'})
+        ProductAll.hasMany(ProductOption,{foreignKey: 'product_id'})
+        let productsList = await ProductAll.findAll({
+            include:[ProductImage, ProductOption]
+        });
         return response.json(productsList)
     },
-    
+    async listarUma(request, response) {
+        let id = request.params.id;
+        const Product = await ProductAll.findOne({
+            where:{
+                id:id
+            }
+        })
+        return response.json(Product)
+    },
     async update(request, response){
         let id = request.params.id;
 

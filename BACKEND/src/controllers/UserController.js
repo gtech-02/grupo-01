@@ -38,9 +38,41 @@ const UserController = {
             message: "usuário cadastrado"
         });
     },
+    async login(request, response){
+        let emailL = request.body.email;
+        let passwordL = request.body.password;
+        if (!emailL || !passwordL){
+            return response.status(400).json({
+                message: "email e senha são obrigatórios"
+            })}
+        let user = await UserName.findOne({
+            where: {email: emailL}
+        });
+        let userPassword = user ? user.password:""
+        let hasValid = await bcrypt.compare(passwordL, userPassword)
+        if(hasValid){
+            return response.status(200).json({
+                message: "usuario logado"
+            })
+        }else{
+            return response.status(404).json({
+                message: "credenciais invalidas"
+            })
+        }
+         
+    },
     async list(request, response){
         let userlist = await UserName.findAll();
         return response.json(userlist)
+    },
+    async listarUma(request, response) {
+        let id = request.params.id;
+        const User = await UserName.findOne({
+            where:{
+                id:id
+            }
+        })
+        return response.json(User)
     },
     async update(request, response){
         let id = request.params.id;
