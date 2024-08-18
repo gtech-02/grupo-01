@@ -5,7 +5,7 @@ app.use(express.json());
 
 
 const { verifyJwtMiddleware } = require('./middlewares/JwtVerification/JwtVerifyToken');
-
+const JwtVerifyToken = require('./middlewares/JwtVerification/JwtVerifyToken');
 
 // controlers
 const ProductController = require('./controllers/ProductController');
@@ -26,27 +26,30 @@ const UserPut_DeleteValidadtion = require('./middlewares/UsersMiddlewares/UserPu
 const OptionPut_Delete = require('./middlewares/OptionsMiddlewares/OptionPut_Delete');
 const ImagePut_Delete = require('./middlewares/ProductImageMiddlewares/ImagePut_Delete');
 
+const PrivateRoutes = express.Router()
+
+PrivateRoutes.use(JwtVerifyToken);
 
 //products
-app.post('/V1/products',ProductCreateValidation, ProductController.create)
+PrivateRoutes.post('/V1/products',ProductCreateValidation, ProductController.create)
 app.get('/V1/products', ProductController.list)
-app.put('/V1/products/:id', ProductUpdate_DeleteValidation,ProductController.update)
-app.delete('/V1/products/:id',ProductUpdate_DeleteValidation, ProductController.delete)
+PrivateRoutes.put('/V1/products/:id', ProductUpdate_DeleteValidation, ProductController.update)
+PrivateRoutes.delete('/V1/products/:id',ProductUpdate_DeleteValidation, ProductController.delete)
 app.get('/V1/products/:id',ProductUpdate_DeleteValidation,ProductController.listarUma)
 //category
-app.post('/V1/Category', CategoryValidaçao,CategoryController.create)
+PrivateRoutes.post('/V1/Category', CategoryValidaçao,CategoryController.create)
 app.get('/V1/Category', CategoryController.list)
-app.put('/V1/Category/:id',CategoryPut_DeleteValidation, CategoryController.update)
-app.delete('/V1/Category/:id',CategoryPut_DeleteValidation, CategoryController.delete)
+PrivateRoutes.put('/V1/Category/:id',CategoryPut_DeleteValidation, CategoryController.update)
+PrivateRoutes.delete('/V1/Category/:id',CategoryPut_DeleteValidation, CategoryController.delete)
 
 //user
 
 app.post('/v1/users/token',UserController.create)
 app.get('/V1/users',UserController.list)
 app.get('/V1/users/:id',UserPut_DeleteValidadtion, UserController.listarUma)
-app.put('/V1/users/:id',UserPut_DeleteValidadtion, UserController.update)
-app.delete('/V1/users/:id',UserPut_DeleteValidadtion, UserController.delete)
-app.post('/V1/users/login',UserController.login )
+PrivateRoutes.put('/V1/users/:id',UserPut_DeleteValidadtion, UserController.update)
+PrivateRoutes.delete('/V1/users/:id',UserPut_DeleteValidadtion, UserController.delete)
+PrivateRoutes.post('/V1/users/login',UserController.login )
 
 //image
 app.post('/V1/images',ImageCreateValidação, ImageController.create)
@@ -63,5 +66,7 @@ app.get('/V1/option/:id',OptionPut_Delete, OptionController.listarUma)
 app.put('/V1/option/:id',OptionPut_Delete, OptionController.update)
 app.delete('/V1/option', OptionController.delete)
 app.delete('/V1/option/:id',OptionPut_Delete, OptionController.deletaUma)
+
+app.use(PrivateRoutes);
 
 app.listen(5002);

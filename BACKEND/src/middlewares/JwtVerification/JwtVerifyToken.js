@@ -5,15 +5,14 @@ function verifyJwtMiddleware(req, res, next) {
     const token = authorization.split(' ')[1];
 
     if(!token) {
-        return res.status(401).json({
+        return res.status(400).json({
             message: "token não fornecido!"
         })
     }
 
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        console.log(decoded);
-        req.user = decoded; // Passa o usuário decodificado para o próximo middleware
+        req.user = decoded;
         next(); 
     } catch (error) {
         console.log(error.message);
