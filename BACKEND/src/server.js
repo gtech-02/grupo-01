@@ -49,23 +49,23 @@ app.get('/V1/users',UserController.list);
 app.get('/V1/users/:id',UserPut_DeleteValidadtion, UserController.listarUma);
 PrivateRoutes.put('/V1/users/:id',UserPut_DeleteValidadtion, UserController.update);
 PrivateRoutes.delete('/V1/users/:id',UserPut_DeleteValidadtion, UserController.delete);
-PrivateRoutes.post('/V1/users/login',UserController.login );
+app.post('/V1/users/login',UserController.login);
 
 //image
-app.post('/V1/images',ImageCreateValidação, ImageController.create);
+PrivateRoutes.post('/V1/images',ImageCreateValidação, ImageController.create);
 app.get('/V1/images', ImageController.list);
 app.get('/V1/images/:id',ImagePut_Delete, ImageController.listarUma);
-app.put('/V1/images/:id',ImagePut_Delete, ImageController.update);
-app.delete('/V1/images', ImageController.delete);
-app.delete('/V1/images/:id',ImagePut_Delete, ImageController.deletaUma);
+PrivateRoutes.put('/V1/images/:id',ImagePut_Delete, ImageController.update);
+PrivateRoutes.delete('/V1/images', ImageController.delete);
+PrivateRoutes.delete('/V1/images/:id',ImagePut_Delete, ImageController.deletaUma);
 
 //option
-app.post('/V1/option',OptionCreateValidation, OptionController.create);
+PrivateRoutes.post('/V1/option',OptionCreateValidation, OptionController.create);
 app.get('/V1/option', OptionController.list);
 app.get('/V1/option/:id',OptionPut_Delete, OptionController.listarUma);
-app.put('/V1/option/:id',OptionPut_Delete, OptionController.update);
-app.delete('/V1/option', OptionController.delete);
-app.delete('/V1/option/:id',OptionPut_Delete, OptionController.deletaUma);
+PrivateRoutes.put('/V1/option/:id',OptionPut_Delete, OptionController.update);
+PrivateRoutes.delete('/V1/option', OptionController.delete);
+PrivateRoutes.delete('/V1/option/:id',OptionPut_Delete, OptionController.deletaUma);
 
 app.use(PrivateRoutes);
 
