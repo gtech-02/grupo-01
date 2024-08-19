@@ -1,31 +1,30 @@
 const connection = require('../database/connection');
 const { DataTypes } = require('sequelize');
 
-const ProductAll = connection.define('products shoes', {
-    id: {
-        type: DataTypes.INTEGER
-    },
-    
+const ProductAll = connection.define('shoes', {  
     enabled: {
         type: DataTypes.BOOLEAN,
+        defaultValue: 0
     },
 
     name: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
     
     slug: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(225),
         allowNull: false
     },
 
     use_in_menu: {
         type: DataTypes.BOOLEAN,
+        defaultValue: 0
     },
 
     stock: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        defaultValue: 0
     },
 
     description: {
@@ -38,13 +37,10 @@ const ProductAll = connection.define('products shoes', {
     },
 
     price_witch_discount: {
-        type: DataTypes.false,
+        type: DataTypes.FLOAT,
         allowNull: false
     },
 
-    define: {
-        timestamps: true,
-    },
 });
 
 module.exports = ProductAll;
